@@ -1,7 +1,7 @@
 
 import { Api } from "./Api.js";
   
- 
+Api.editarCliente(1, {nome:"Anderson"})
 
 
     const clientes = await Api.listarClientes()
