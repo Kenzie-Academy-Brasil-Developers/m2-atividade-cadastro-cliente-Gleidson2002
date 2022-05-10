@@ -13,7 +13,7 @@ class Api {
 
         const baseUrl = "https://atividade-api-clientes.herokuapp.com/clientes"
         const response = await fetch(baseUrl,{
-            method: "PATCH",
+            method: "POST",
             headers:{
                 "Content-Type": "application/json",
 
@@ -39,6 +39,12 @@ class Api {
     }
 
     static async deletarCliente(id){
+      
+        const response = await fetch("https://atividade-api-clientes.herokuapp.com/clientes/"+id, {
+            method: "DELETE"
+        })
+
+        console.log(id)
 
     }
 

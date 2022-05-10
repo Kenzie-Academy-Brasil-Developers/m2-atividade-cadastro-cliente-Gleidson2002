@@ -10,9 +10,9 @@ fcadastro.addEventListener("submit",(event)=>{
     let nome = document.getElementsByName("nome")[0].value
     let dnasci = document.getElementsByName("data_nasc")[0].value
     
-    //let inicial = new Date(dnasci)
-    //let final = new Date()
-    //let idade= Math.floor((final- inicial)/31536000000)
+    let inicial = new Date(dnasci)
+    let final = new Date()
+    let idade= Math.floor((final- inicial)/31536000000)
     let sexo = document.getElementsByName("sexo")[0].value
     let email = document.getElementsByName("email")[0].value
   
@@ -23,6 +23,7 @@ fcadastro.addEventListener("submit",(event)=>{
     let cidade = document.getElementsByName("cidade")[0].value
     let estado = document.getElementsByName("estado")[0].value
     let telefone = document.getElementsByName("telefone_fixo")[0].value
+    let telefonefixo = document.getElementById("telefone_fixo")
     let endereco= {
         bairro: bairro,
         cep: cep,
@@ -36,12 +37,14 @@ fcadastro.addEventListener("submit",(event)=>{
     
     const data = {
         nome: nome,
-        idade: dnasci,
+        idade: idade,
         data_nasc: dnasci,
         email:email,
         sexo: sexo,
         endereco: endereco,
-        telefone: telefone
+        telefone_fixo: telefone,
+        telefone: telefone,
+        cpf: "12345678910"
 
 
     }

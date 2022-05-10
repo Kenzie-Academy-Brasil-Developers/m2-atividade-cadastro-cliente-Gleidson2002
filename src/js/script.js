@@ -1,16 +1,16 @@
 
 import { Api } from "./Api.js";
   
-Api.editarCliente(1, {nome:"Anderson"})
+
 
 
     const clientes = await Api.listarClientes()
     const listaClientes  = document.querySelector("ul")
-    console.log(clientes)
+    
     function templateClientes(clientes){
   
       clientes.forEach(({nome,idade,cpf,data_nasc,sexo,email,endereco,telefone_fixo})=>{
-          const {rua,cep,numero,bairro,cidade,estado} = endereco
+          const {cep,rua,numero,bairro,cidade,estado} = endereco
           const li = document.createElement("li")
           
           li.innerHTML = `
@@ -37,5 +37,5 @@ Api.editarCliente(1, {nome:"Anderson"})
     templateClientes(clientes)
     
 
-
+let botaodeletar= document.getElementById("botaodeletar") 
 
